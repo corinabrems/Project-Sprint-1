@@ -1,8 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgb(251,251,255);
+  background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
 }
 
 a {
   color: #00B7FF;
+}
+
+img.animated-gif{
+  width: 90px;
+  height: auto;
 }
