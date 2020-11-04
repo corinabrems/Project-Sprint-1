@@ -9,7 +9,7 @@ a {
   color: #00B7FF;
 }
 
-img.animated-gif{
-  width: 90px;
-  height: auto;
+img {
+  width: auto;
+  height: 30px;
 }
