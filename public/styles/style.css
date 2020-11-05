@@ -45,6 +45,36 @@ ul {
   color: black;
 }
 
+td{
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.tableLeft{
+  text-align: left;
+}
+
+.tableMid1{
+  text-align: center;
+}
+
+.tableMid2{
+  text-align: center;
+}
+
+.tableRight{
+  text-align: right;
+  padding-right: 0px;
+}
+
+#firstRow ~ td{
+  padding-top: 0px;
+}
+
+footer{
+  margin-top: 20px;
+}
+
 @media screen and (min-width: 801px){
   header, body, footer{
 
