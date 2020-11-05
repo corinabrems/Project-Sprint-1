@@ -16,11 +16,12 @@ a {
 
 img {
   width: auto;
-  height: 30px;
+  height: 250px;
 }
-img.animated-gif{
-  width: 100px;
-  height: auto;
+#animated-gif{
+  width: auto;
+  height: 35px;
+  padding-left: 10px;
 }
 ul {
   list-style-type: none;
