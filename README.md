@@ -2,10 +2,7 @@
 IST 256
 
 1. To get the code running, type:
-
-   npm install
-
-   npm install -g nodemon
+   SET DEBUG=express-app:*
 
    npm start
 
