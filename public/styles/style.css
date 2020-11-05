@@ -13,3 +13,12 @@ img {
   width: auto;
   height: 30px;
 }
+img.animated-gif{
+  width: 100px;
+  height: auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
