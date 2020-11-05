@@ -18,11 +18,23 @@ img {
   width: auto;
   height: 250px;
 }
+
 #animated-gif{
   width: auto;
   height: 35px;
   padding-left: 10px;
 }
+
+#destinationDrop, #startDrop{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#startButton{
+  margin-top: 5px;
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
