@@ -1,3 +1,8 @@
+h1{
+  font-weight: bold;
+  color: blue;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -11,14 +16,93 @@ a {
 
 img {
   width: auto;
-  height: 30px;
+  height: 250px;
 }
-img.animated-gif{
-  width: 100px;
-  height: auto;
+
+#animated-gif{
+  width: auto;
+  height: 35px;
+  padding-left: 10px;
 }
+
+#destinationDrop, #startDrop{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#startButton{
+  margin-top: 5px;
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+#destinationTxt {
+  color: black;
+}
+
+td{
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.tableLeft{
+  text-align: left;
+}
+
+.tableMid1{
+  text-align: center;
+}
+
+.tableMid2{
+  text-align: center;
+}
+
+.tableRight{
+  text-align: right;
+  padding-right: 0px;
+}
+
+#firstRow ~ td{
+  padding-top: 0px;
+}
+
+footer{
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 801px){
+  header, body, footer{
+
+      font-size: 100%
+
+  }
+}
+
+@media screen and (max-width: 800px){
+  header, body, footer{
+
+      font-size: 90%;
+
+  }
+}
+
+@media screen and (max-width: 600px){
+  header, body, footer{
+
+      font-size: 80%;
+
+  }
+}
+
+@media screen and (max-width: 500px){
+  header, body, footer{
+
+      font-size: 70%
+
+  }
 }

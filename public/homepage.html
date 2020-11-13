@@ -15,19 +15,95 @@
 
   <body>
 
-    <h1>Welcome to Our App!</h1>
+    <h1>Navigate PSU<img id="animated-gif"src="images/source.gif" alt="psu logo"></h1>
 
-    <p>
-      <img class="animated-gif" src="images/source.gif">
-        <div id="psuImage"><img src="images/psu logo2.png" alt="psu logo"></div>
-    
-    </p>
-    <ul>
-      <li><a href="default.asp">Home</a></li>
-      <li><a href="FAQ.asp">FAQ</a></li>
-      <li><a href="contact.asp">Contact</a></li>
-      <li><a href="about.asp">About</a></li>
-    </ul>
+    <label for="startDrop">Choose&nbsp;a&nbsp;starting:&nbsp;</label>
+    <select name="startDrop" id="startDrop">
+      <option value="none">...</option>
+      <option value="arboretum">Arboretum</option>
+      <option value="beaverStadium">Beaver Stadium</option>
+      <option value="berkeyCreamery">Berkey Creamery</option>
+      <option value="bjc">Bryce Jordan Center</option>
+      <option value="eastDorms">East Dorms</option>
+      <option value="hub">HUB</option>
+      <option value="imBuilding">IM Building</option>
+      <option value="shrine">Nittany Lion Shrine</option>
+      <option value="northDorms">North Dorms</option>
+      <option value="oldMain">Old Main</option>
+      <option value="library">Pattee / Paterno Library</option>
+      <option value="southDorms">South Dorms</option>
+      <option value="westDorms">West Dorms</option>
+      <option value="westage">Westgate Building</option>
+    </select>
+
+    <br>
+
+    <label for="destinationDrop">Choose&nbsp;a&nbsp;destination:&nbsp;</label>
+    <select name="destinationDrop" id="destinationDrop">
+      <option value="none">...</option>
+      <option value="arboretum">Arboretum</option>
+      <option value="beaverStadium">Beaver Stadium</option>
+      <option value="berkeyCreamery">Berkey Creamery</option>
+      <option value="bjc">Bryce Jordan Center</option>
+      <option value="eastDorms">East Dorms</option>
+      <option value="hub">HUB</option>
+      <option value="imBuilding">IM Building</option>
+      <option value="shrine">Nittany Lion Shrine</option>
+      <option value="northDorms">North Dorms</option>
+      <option value="oldMain">Old Main</option>
+      <option value="library">Pattee / Paterno Library</option>
+      <option value="southDorms">South Dorms</option>
+      <option value="westDorms">West Dorms</option>
+      <option value="westage">Westgate Building</option>
+    </select> 
+
+    <!--Use JS to make Start Button-->
+    <div id="startButton">Start Button</div>
+
+
+    <div id="navLinksTable">
+      <p>Links below are to each information page. Will be removed when can navigate with JavaScript.</p>
+      <table>
+
+        <tr id="firstRow">
+            <td class="tableLeft"><a href="arboretuminfo.html">Arboretum</a></td>
+            <td class="tableMid1"><a href="beaverstadiuminfo.html">Beaver Stadium</a></td>
+            <td class="tableMid2"><a href="berkeycreameryinfo.html">Berkey Creamery</a></td>
+            <td class="tableRight"><a href="bjcinfo.html">Bryce Jordan Center</a></td>
+        </tr>
+
+        <tr id="secondRow">
+          <td class="tableLeft"><a href="eastdormsinfo.html">East Dorms</a></td>
+          <td class="tableMid1"><a href="hubinfo.html">HUB</a></td>
+          <td class="tableMid2"><a href="imbuildinginfo.html">IM Building</a></td>
+          <td class="tableRight"><a href="nittanylionshrineinfo.html">Nittany Lion Shrine</a></td>
+        </tr>
+
+        <tr id="thridRow">
+          <td class="tableLeft"><a href="northdormsinfo.html">North Dorms</a></td>
+          <td class="tableMid1"><a href="oldmaininfo.html">Old Main</a></td>
+          <td class="tableMid2"><a href="patteepaternolibraryinfo.html">Pattee / Paterno Library</a></td>
+          <td class="tableRight"><a href="southdormsinfo.html">South Dorms</a></td>
+        </tr>
+
+        <tr id="fourthRow">
+          <td class="tableLeft"><a href="westdormsinfo.html">West Dorms</a></td>
+          <td class="tableMid1"><a href="westgateinfo.html">Westgate Building</a></td>
+        </tr>
+
+      </table>
+    </div>
 
   </body>
+
+  <footer>
+    <div>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </footer>
+
 </html>
