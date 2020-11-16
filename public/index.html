@@ -10,6 +10,10 @@
     <title>PSU Navigation Game</title>
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="scripts/scripts.js" defer></script>
+    <script  src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 
   </head>
 
@@ -17,7 +21,7 @@
 
     <h1>Navigate PSU<img id="animated-gif"src="images/source.gif" alt="psu logo"></h1>
 
-    <label for="startDrop">Choose&nbsp;a&nbsp;starting:&nbsp;</label>
+    <label for="startDrop">Choose&nbsp;a&nbsp;starting&nbsp;location:&nbsp;</label>
     <select name="startDrop" id="startDrop">
       <option value="none">...</option>
       <option value="arboretum">Arboretum</option>
@@ -57,8 +61,11 @@
       <option value="westage">Westgate Building</option>
     </select> 
 
-    <!--Use JS to make Start Button-->
-    <div id="startButton">Start Button</div>
+    <!--Displays when start and end locations are the same-->
+    <div id="locationInputError"></div>
+
+    <!--Contains Start Button-->
+    <div id="startButton"></div>
 
 
     <div id="navLinksTable">

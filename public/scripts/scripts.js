@@ -1,0 +1,55 @@
+/**
+ * Creates basic button with formatting
+ * @param {*} buttonName 
+ * ^^name of button
+ * @param {*} IdLocation 
+ * ^^id of html element button is added to
+ */
+function createButton(buttonName, IdLocation){
+    let btn = document.createElement("button");
+    let btnName = document.createTextNode(buttonName);
+
+    btn.appendChild(btnName);
+
+    let btnLocation = document.getElementById(IdLocation);
+
+    btn.style.backgroundColor = "cyan";
+    btn.style.color = "black";
+    btn.style.marginTop = "10px";
+    btn.style.marginBottom = "10px";
+    btn.style.paddingTop = "5px";
+    btn.style.paddingBottom = "5px";
+    btn.style.flexGrow = "1";
+    btn.style.flexShrink = "1";
+
+    btnLocation.appendChild(btn);
+}
+
+//start button for index.html
+var startButton = createButton("Start Game", "startButton");
+$("#startButton").click(function(){
+    //gets selected starting location from dropdown box
+    let startLocation = $("#startDrop option:selected").text();
+    //gets selected destination from dropdown box
+    let destinationLocation = $("#destinationDrop option:selected").text();
+    //checks if start and destination location are the same and throws error if they do
+    if(startLocation === destinationLocation){
+        let errorMsg = document.getElementById("locationInputError");
+        errorMsg.innerText = "Start and destination locations must differ."
+        errorMsg.style.color = "red";
+        errorMsg.style.fontSize = "80%";
+        console.log("Error: Start and Destination locations match");
+    }
+    else{
+        let errorMsg = document.getElementById("locationInputError");
+        errorMsg.innerHTML = "";
+        console.log("Start Location: " + startLocation);
+        console.log("Destination Location: " + destinationLocation);
+
+        //add functionality that takes start and end and creates page with google maps
+    }
+
+    
+});
+
+document.addEventListener("load", startButton);
