@@ -46,7 +46,8 @@ $("#startButton").click(function(){
         console.log("Start Location: " + startLocation);
         console.log("Destination Location: " + destinationLocation);
 
-        //add functionality that takes start and end and creates page with google maps
+        //changes page to game.html
+        window.location = "/game.html";
     }
 
     
