@@ -1,7 +1,33 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
 /*All pages full page grid container*/
-header{
+.grid-container{
+  display: grid;
+  grid-gap: 0px;
+  grid-template-rows: 30px 520px 30px;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.area-1{
   grid-area: header;
   background-color: lightgray;
+}
+
+.area-2{
+  grid-area: main;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
+}
+
+.area-3{
+  grid-area: footer;
+  background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
 }
 
 ul {
@@ -13,10 +39,12 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  list-style-type: none;
 }
 
 li {
   float: left;
+  border-right: 1px solid #bbb;
 }
 
 li a {
@@ -32,34 +60,13 @@ li a:hover {
   background-color: #111;
 }
 
-body{
-  grid-area: body;
-}
-
-footer{
-  grid-area: footer;
-}
-
-.fullPageContainer{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 10% 80% 10%;
-  grid-template-areas: 
-    "header header header header"
-    "body body body body"
-    "footer footer footer footer";
+li:last-child{
+  border-right: none;
 }
 
 h1{
   font-weight: bold;
   color: blue;
-}
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: rgb(251,251,255);
-  background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
 }
 
 a {
@@ -80,17 +87,12 @@ img {
 #destinationDrop, #startDrop{
   margin-top: 5px;
   margin-bottom: 5px;
+  width: 200px;
+  display: inline-block;
 }
 
 #startButton{
   margin-top: 5px;
-}
-
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 #destinationTxt {
@@ -123,10 +125,6 @@ td{
   padding-top: 0px;
 }
 
-footer{
-  margin-top: 20px;
-}
-
 /*Contact page card styling*/
 .infoFlexContainer {
   display: flex;
@@ -147,6 +145,10 @@ footer{
 /* Add some padding inside the card container */
 .infoContainer {
   padding: 2px 16px;
+}
+
+footer > p{
+  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 @media screen and (min-width: 801px){
