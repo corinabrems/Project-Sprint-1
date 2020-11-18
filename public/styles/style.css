@@ -1,3 +1,55 @@
+/*All pages full page grid container*/
+header{
+  grid-area: header;
+  background-color: lightgray;
+}
+
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+body{
+  grid-area: body;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.fullPageContainer{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: 
+    "header header header header"
+    "body body body body"
+    "footer footer footer footer";
+}
+
 h1{
   font-weight: bold;
   color: blue;
@@ -73,6 +125,28 @@ td{
 
 footer{
   margin-top: 20px;
+}
+
+/*Contact page card styling*/
+.infoFlexContainer {
+  display: flex;
+}
+
+.infoCards {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: 10px 20px 10px 0px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.infoCards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.infoContainer {
+  padding: 2px 16px;
 }
 
 @media screen and (min-width: 801px){
