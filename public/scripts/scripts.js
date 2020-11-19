@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 const { format } = require("morgan");
+=======
+$(document).ready(function(){
+    console.log('Started!');
+})
+>>>>>>> d9303588a6d6134c1e638367c30a0df56d48ccb6
 
 /**
  * Creates basic button with formatting
