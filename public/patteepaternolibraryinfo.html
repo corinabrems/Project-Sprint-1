@@ -40,18 +40,17 @@
                 <p> Students can also reserve seats and rooms for studying or they can use the avaialble rooms and
                     spaces to study. There is convieniently a Starbucks on the Pattee side of the libray by the study
                     rooms.
-
             </div>
 
             <br>
 
-            <img class="PatLibrary" src="images\library.jpg" alt="library image">
+            <img id="library" src="images/library.jpg" alt="library image">
 
-            <div id="map"></div>
+            <div class="googleMaps" id="map"></div>
 
             <script>
                 function initMap() {
-                    const myLatLng = { lat: 40.797596, lng: -77.866386 };
+                    const myLatLng = { lat: 40.797638, lng: -77.866412 };
                     const map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 17,
                         center: myLatLng,
@@ -59,13 +58,14 @@
                     new google.maps.Marker({
                         position: myLatLng,
                         map,
-                        title: "Pattee and Paterno Library",
+                        title: "Pattee / Paterno Library",
                     });
                 }
             </script>
+
             <script defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-                </script>
+            </script>
 
         </main>
 

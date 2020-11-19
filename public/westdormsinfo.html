@@ -40,12 +40,12 @@
             </div>
             <br>
             <img class="West Dorms" src="images\westdorms.jpg" alt="west dorms image">
-
-            <div id="map"></div>
+      
+            <div class="googleMaps" id="map"></div>
 
             <script>
                 function initMap() {
-                    const myLatLng = { lat: 0.796260, lng: -77.866738 };
+                    const myLatLng = { lat: 40.796343, lng: -77.866636 };
                     const map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 17,
                         center: myLatLng,
@@ -53,13 +53,14 @@
                     new google.maps.Marker({
                         position: myLatLng,
                         map,
-                        title: "West Residence Halls",
+                        title: "West Dorms",
                     });
                 }
             </script>
+
             <script defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-                </script>
+            </script>
 
         </main>
 

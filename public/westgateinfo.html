@@ -30,6 +30,7 @@
 
         <main class="area-2">
 
+
             <h1 class="titleText">Welcome to the Westgate Building!</h1>
             <div class="infoText">
                 <p>On Penn State's website for the College of IST, you'll see Visitor Information which provides you
@@ -44,12 +45,12 @@
             <br>
 
             <img class="Westgate" src="images\ist-building.jpg" alt="westgate image">
-
-            <div id="map"></div>
-
+      
+            <div class="googleMaps" id="map"></div>
+    
             <script>
                 function initMap() {
-                    const myLatLng = { lat: 40.793841, lng: -77.867656 };
+                    const myLatLng = { lat: 40.793680, lng: -77.868378 };
                     const map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 17,
                         center: myLatLng,
@@ -61,9 +62,10 @@
                     });
                 }
             </script>
+
             <script defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-                </script>
+            </script>
 
         </main>
 
