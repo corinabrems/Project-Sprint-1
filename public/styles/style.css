@@ -77,6 +77,11 @@ a {
 
 img {
   width: auto;
+  height: 300px;
+}
+
+.contact{
+  width: auto;
   height: 250px;
 }
 
