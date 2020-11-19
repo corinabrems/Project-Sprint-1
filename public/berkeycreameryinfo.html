@@ -1,58 +1,79 @@
 <html>
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Project-Sprint-1-main">
-    <meta name="keywords" content="HTML">
-    <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
+        <meta charset="UTF-8">
+        <meta name="description" content="Project-Sprint-1-main">
+        <meta name="keywords" content="HTML">
+        <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-    <title>Berkey Creamery</title>
+        <title>Berkey Creamery</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <script>
-        function initMap() {
-            const myLatLng = { lat: 40.803733, lng: -77.862368 };
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 17,
-                center: myLatLng,
-            });
-            new google.maps.Marker({
-                position: myLatLng,
-                map,
-                title: "Berkey Creamery",
-            });
-        }
-    </script>
-    <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-        </script>
+        <div class="grid-container">
 
-    <h1 class="titleText">Welcome to Berkey Creamery!</h1>
+            <header class="area-1">
 
-    <div class="infoText">
-        <p>To anyone with a sweet tooth on campus, Berkey Creamery should be no stranger. Famous for its ice cream and
-            strict no mixing policy, Berkey Creamery serves an incredible quantity of ice cream yearly to students,
-            parents, and visitors.</p>
-        <p>Some of the many flavors served at Berkey Creamery include Death by Chocolate, Alumni Swirl, Vanilla Bean,
-            Butter Pecan, and Peachy Paterno. Berkey Creamery also ships to 48 states!</p>
-    </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
 
-    <br>
+            </header>
 
-    <img id="creameryImage" src="images\creameryimg.jpg" alt="creamery image">
+            <main class="area-2">
 
-    <div class="googleMaps" id="map"></div>
+                <h1 class="titleText">Welcome to Berkey Creamery!</h1>
 
-    <br>
+                <div class="infoText">
+                    <p>To anyone with a sweet tooth on campus, Berkey Creamery should be no stranger. Famous for its ice cream and
+                        strict no mixing policy, Berkey Creamery serves an incredible quantity of ice cream yearly to students,
+                        parents, and visitors.</p>
+                    <p>Some of the many flavors served at Berkey Creamery include Death by Chocolate, Alumni Swirl, Vanilla Bean,
+                        Butter Pecan, and Peachy Paterno. Berkey Creamery also ships to 48 states!</p>
+                </div>
 
-    <p><a href="index.html">Home</a></p>
+                <br>
 
-</body>
+                <img id="creameryImage" src="images\creameryimg.jpg" alt="creamery image">
+
+                <div class="googleMaps" id="map"></div>
+
+                <script>
+                    function initMap() {
+                        const myLatLng = { lat: 40.803733, lng: -77.862368 };
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 17,
+                            center: myLatLng,
+                        });
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map,
+                            title: "Berkey Creamery",
+                        });
+                    }
+                </script>
+                <script defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
+                </script>
+
+            </main>
+
+            <footer class="area-3">
+
+                <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+
+            </footer>
+
+        </div>
+
+    </body>
 
 </html>
