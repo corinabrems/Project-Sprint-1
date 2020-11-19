@@ -29,7 +29,7 @@
         </header>
 
         <main class="area-2">
-
+          
             <h1 class="titleText">Welcome to South Dorms!</h1>
             <div class="infoText">
                 <p> South Dorms are located along East College Avenue, making it an easy walk to downtown State College!
@@ -37,16 +37,15 @@
                     with limited space for 890 first-year students at McElwain, Atherton, and Simmons Halls.
                 <p> South also offers rennovated options, a computer lab, a cultural lounge, a food court, and a
                     convienince store.
-
             </div>
             <br>
             <img class="South Dorms" src="images\southdorms.jpg" alt="south dorms image">
 
-            <div id="map"></div>
+            <div class="googleMaps" id="map"></div>
 
             <script>
                 function initMap() {
-                    const myLatLng = { lat: 40.799316, lng: -77.856345 };
+                    const myLatLng = { lat: 40.799361, lng: -77.856344 };
                     const map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 17,
                         center: myLatLng,
@@ -54,13 +53,14 @@
                     new google.maps.Marker({
                         position: myLatLng,
                         map,
-                        title: "South Residence Halls",
+                        title: "South Dorms",
                     });
                 }
             </script>
+
             <script defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-                </script>
+            </script>
 
         </main>
 
