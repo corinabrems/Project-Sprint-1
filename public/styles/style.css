@@ -23,11 +23,13 @@ html, body{
   grid-area: main;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
+  padding-left: 10px;
 }
 
 .area-3{
   grid-area: footer;
   background: linear-gradient(90deg, rgba(251,251,255,1) 8%, rgba(233,233,255,1) 31%, rgba(0,212,255,1) 86%);
+  padding-left: 10px;
 }
 
 ul {
@@ -149,6 +151,7 @@ td{
 
 footer > p{
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: gray;
 }
 
 @media screen and (min-width: 801px){
