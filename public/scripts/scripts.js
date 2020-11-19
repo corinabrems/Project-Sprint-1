@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    console.log('Started!');
+})
+
 /**
  * Creates basic button with formatting
  * @param {*} buttonName 
