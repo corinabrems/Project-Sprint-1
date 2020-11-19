@@ -1,5 +1,3 @@
-const { format } = require("morgan");
-
 /**
  * Creates basic button with formatting
  * @param {*} buttonName 
