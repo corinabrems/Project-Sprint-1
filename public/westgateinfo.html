@@ -39,6 +39,27 @@
                 
                 <img class="Westgate" src="images\ist-building.jpg" alt="westgate image">
 
+                <div class="googleMaps" id="map"></div>
+    
+                <script>
+                    function initMap() {
+                        const myLatLng = { lat: 40.793680, lng: -77.868378 };
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 17,
+                            center: myLatLng,
+                        });
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map,
+                            title: "Westgate Building",
+                        });
+                    }
+                </script>
+
+                <script defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
+                </script>
+
             </main>
 
             <footer class="area-3">
