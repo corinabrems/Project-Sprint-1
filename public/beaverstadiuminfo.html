@@ -41,6 +41,26 @@
 
                 <img id="beaverStadiumImage" src="images\beaverstadium.jpg" alt="beaver stadium image">
 
+                <div id="map"></div>
+               
+               <script>
+                    function initMap() {
+                        const myLatLng = { lat: 40.812195, lng: -77.856121 };
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 17,
+                            center: myLatLng,
+                        });
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map,
+                            title: "Beaver Stadium",
+                        });
+                    }
+                </script>
+                <script defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
+                    </script>
+
             </main>
 
             <footer class="area-3">

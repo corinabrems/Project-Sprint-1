@@ -1,56 +1,58 @@
 <html>
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="description" content="Project-Sprint-1-main">
-        <meta name="keywords" content="HTML">
-        <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
+    <meta charset="UTF-8">
+    <meta name="description" content="Project-Sprint-1-main">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-        <title>East Dorms</title>
+    <title>East Dorms</title>
 
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div class="grid-container">
+    <script>
+        function initMap() {
+            const myLatLng = { lat: 40.812195, lng: -77.856121 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 17,
+                center: myLatLng,
+            });
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Beaver Stadium",
+            });
+        }
+    </script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
+        </script>
 
-            <header class="area-1">
+    <h1 class="titleText">Welcome to East Dorms!</h1>
 
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-                
-            </header>
+    <div class="infoText">
+        <p>East Dorms are one of the main dorm areas on campus. This dorm area is the largest on campus and is home to
+            many of the campus's freshmen. These dorms are close to the IM Building, Bryce Jordan Center, and Beaver
+            Stadium.</p>
+    </div>
 
-            <main class="area-2">
+    <br>
 
+    <img id="eastDormsImage" src="images/eastdorms.jpg" alt="east dorms image">
 
-                <h1 class="titleText">Welcome to East Dorms!</h1>
+    <div id="map"></div>
 
-                <div class="infoText">
-                    <p>East Dorms are one of the main dorm areas on campus. This dorm area is the largest on campus and is home to many of the campus's freshmen. These dorms are close to the IM Building, Bryce Jordan Center, and Beaver Stadium.</p>
-                </div>
+    <br>
 
-                <br>
+    <p><a href="index.html">Home</a></p>
 
-                <img id="eastDormsImage" src="images/eastdorms.jpg" alt="east dorms image">
-                
-            </main>
+</body>
 
-            <footer class="area-3">
-
-                <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
-
-            </footer>
-
-        </div>
-
-    </body>
+</body>
 
 </html>
