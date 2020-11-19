@@ -31,11 +31,6 @@
         <main class="area-2">
           
             <h1 class="titleText">Welcome to the Arboretum!</h1>
-
-            <img id="arboretumImage" src="images/arboretumimg.png" alt="arboretum image">
-
-            <div id="map"></div>
-
        
             <div class="infoText">
                 <p>From the official website of the Arboretum, "The mission of the Arboretum is to engage the academic strengths
@@ -51,11 +46,11 @@
 
             <img id="arboretumImage"src="images/arboretumimg.png" alt="arboretum image">
 
-            <div id="map"></div>
+            <div class="googleMaps" id="map"></div>
     
             <script>
                 function initMap() {
-                    const myLatLng = { lat: 40.06053, lng: -77.868506 };
+                    const myLatLng = { lat: 40.806120, lng: -77.868510 };
                     const map = new google.maps.Map(document.getElementById("map"), {
                         zoom: 17,
                         center: myLatLng,
