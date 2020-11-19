@@ -231,15 +231,15 @@ footer > p{
   right: 0;
 }
 
-#beginnerStartButton{
+#beginnerButton{
   background-color: green;
 }
 
-#noviceStartButton{
+#intermediateButton{
   background-color: orange;
 }
 
-#expertStartButton{
+#expertButton{
   background-color: red;
 }
 
