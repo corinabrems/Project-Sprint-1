@@ -1,3 +1,5 @@
+const { format } = require("morgan");
+
 /**
  * Creates basic button with formatting
  * @param {*} buttonName 
@@ -53,5 +55,20 @@ $("#startButton").click(function(){
     
 });
 
-
 document.addEventListener("load", startButton);
+
+function checkBeginner(){
+    var question1 = document.getElementById("question1");
+    var question2 = document.getElementById("question2");
+    let correct = 0;
+
+    if(question1 == "Pattee and Paterno Library"){
+        correct++;
+    }
+    if(question2 == "West Dorms"){
+        correct++;
+    }
+
+    document.getElementById("results").innerHTML = "You got " + correct + " correct. **Unfortunately there is an error in calculating the total currently**";
+};
+

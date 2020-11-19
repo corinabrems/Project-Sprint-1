@@ -1,6 +1,6 @@
 <html>
 
-  <head>
+<head>
 
     <meta charset="UTF-8">
     <meta name="description" content="Project-Sprint-1-main">
@@ -10,42 +10,65 @@
     <title>About</title>
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="scripts/scripts.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="grid-container">
 
-      <header class="area-1">
+        <header class="area-1">
 
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
 
-      </header>
+        </header>
 
-      <main class="area-2">
+        <main class="area-2">
 
-        <h1 id="aboutTitle">About</h1>
+            <h1 id="aboutTitle">Beginner Route</h1>
 
-        <p id="aboutText">
-            This game is made to help anyone using it to better learn navigation throughout Penn State's campus.
-        </p>
+            <p id="aboutText">
+                Good luck! For each question, choose the answer that's along the path to the destination.
 
-      </main>  
+                For this route, you will be starting at North Dorms and ending at the Westgate Building!
+            </p>
 
-      <footer class="area-3">
-        
-        <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+            <form id="quizBeginner" name="quizBeginner"></form>
+            <p>Starting at North Dorms, where will you go next on your way to the Westgate Building?</p>
+            <input type="radio" id="mc" name="question1" value="HUB">HUB<br>
+            <input type="radio" id="mc" name="question1" value="Pattee and Paterno Library">Pattee and Paterno
+            Library<br>
 
-      </footer>
+            <p>Where would you go next?</p>
+            <input type="radio" id="mc" name="question2" value="North Dorms">North Dorms<br>
+            <input type="radio" id="mc" name="question2" value="West Dorms">West Dorms<br>
+
+            <br>
+            <br>
+
+            <input id="button" type="button" value="I've arrived at Westgate!" onclick="checkBeginner();">
+            </form>
+
+            <div id="results"></div>
+
+
+
+        </main>
+
+        <footer class="area-3">
+
+            <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+
+        </footer>
 
     </div>
 
-  </body>
+</body>
 
 </html>
