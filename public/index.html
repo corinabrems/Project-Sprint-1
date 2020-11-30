@@ -24,6 +24,8 @@
       <header class="area-1">
 
         <ul>
+          <li><img id="animated-gif"src="images/source.gif" alt="psu logo"></li>
+          <li><a href="index.html">Navigate PSU</a></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -32,238 +34,259 @@
         
       </header>
 
-      <main class="area-2">
-        <h1>Navigate PSU<img id="animated-gif"src="images/source.gif" alt="psu logo"></h1>
+      <main>
 
-        <label for="startDrop">Choose&nbsp;a&nbsp;starting&nbsp;location:&nbsp;</label>
-        <select name="startDrop" id="startDrop">
-          <option value="none">...</option>
-          <option value="arboretum">Arboretum</option>
-          <option value="beaverStadium">Beaver Stadium</option>
-          <option value="berkeyCreamery">Berkey Creamery</option>
-          <option value="bjc">Bryce Jordan Center</option>
-          <option value="eastDorms">East Dorms</option>
-          <option value="hub">HUB</option>
-          <option value="imBuilding">IM Building</option>
-          <option value="shrine">Nittany Lion Shrine</option>
-          <option value="northDorms">North Dorms</option>
-          <option value="oldMain">Old Main</option>
-          <option value="library">Pattee / Paterno Library</option>
-          <option value="southDorms">South Dorms</option>
-          <option value="westDorms">West Dorms</option>
-          <option value="westage">Westgate Building</option>
-        </select>
+        <!--Contains all game elements-->
+        <section class="area-2" id="gameSection">
 
-        <br>
+          <h1 class="title" id="gameTitle">Game</h1>
+          
+          <label for="startDrop">Choose&nbsp;a&nbsp;starting&nbsp;location:&nbsp;</label>
+          <select name="startDrop" id="startDrop">
+            <option value="none">...</option>
+            <option value="arboretum">Arboretum</option>
+            <option value="beaverStadium">Beaver Stadium</option>
+            <option value="berkeyCreamery">Berkey Creamery</option>
+            <option value="bjc">Bryce Jordan Center</option>
+            <option value="eastDorms">East Dorms</option>
+            <option value="hub">HUB</option>
+            <option value="imBuilding">IM Building</option>
+            <option value="shrine">Nittany Lion Shrine</option>
+            <option value="northDorms">North Dorms</option>
+            <option value="oldMain">Old Main</option>
+            <option value="library">Pattee / Paterno Library</option>
+            <option value="southDorms">South Dorms</option>
+            <option value="westDorms">West Dorms</option>
+            <option value="westage">Westgate Building</option>
+          </select>
 
-        <label for="destinationDrop">Choose&nbsp;a&nbsp;destination:&nbsp;</label>
-        <select name="destinationDrop" id="destinationDrop">
-          <option value="none">...</option>
-          <option value="arboretum">Arboretum</option>
-          <option value="beaverStadium">Beaver Stadium</option>
-          <option value="berkeyCreamery">Berkey Creamery</option>
-          <option value="bjc">Bryce Jordan Center</option>
-          <option value="eastDorms">East Dorms</option>
-          <option value="hub">HUB</option>
-          <option value="imBuilding">IM Building</option>
-          <option value="shrine">Nittany Lion Shrine</option>
-          <option value="northDorms">North Dorms</option>
-          <option value="oldMain">Old Main</option>
-          <option value="library">Pattee / Paterno Library</option>
-          <option value="southDorms">South Dorms</option>
-          <option value="westDorms">West Dorms</option>
-          <option value="westage">Westgate Building</option>
-        </select> 
+          <br>
 
-        <!--Displays when start and end locations are the same-->
-        <div id="locationInputError"></div>
+          <label for="destinationDrop">Choose&nbsp;a&nbsp;destination:&nbsp;</label>
+          <select name="destinationDrop" id="destinationDrop">
+            <option value="none">...</option>
+            <option value="arboretum">Arboretum</option>
+            <option value="beaverStadium">Beaver Stadium</option>
+            <option value="berkeyCreamery">Berkey Creamery</option>
+            <option value="bjc">Bryce Jordan Center</option>
+            <option value="eastDorms">East Dorms</option>
+            <option value="hub">HUB</option>
+            <option value="imBuilding">IM Building</option>
+            <option value="shrine">Nittany Lion Shrine</option>
+            <option value="northDorms">North Dorms</option>
+            <option value="oldMain">Old Main</option>
+            <option value="library">Pattee / Paterno Library</option>
+            <option value="southDorms">South Dorms</option>
+            <option value="westDorms">West Dorms</option>
+            <option value="westage">Westgate Building</option>
+          </select> 
 
-        <!--Contains Start Button-->
-        <div id="startButton"></div>
+          <!--Displays when start and end locations are the same-->
+          <div id="locationInputError"></div>
 
-        <br><br>
-        <a href="/game.html"><p>Temporary link to the game</p></a>
+          <!--Contains Start Button-->
+          <div id="startButton"></div>
+
+          <br><br>
+          <a href="/game.html"><p>Temporary link to the game</p></a>
+
+        </section>
+        <!--End of game section-->
 
 
-        <div id="navLinksTable">
-          <p>Quick Links</p>
-          <table>
+        <!--Contains all Navigation cards-->
+        <section class="area-3" id="infoSection">
 
-            <tr id="firstRow">
-                <td class="tableLeft">
-                  <div class="locateCards" id="arboretumInfo">
+          <div id="navLinksTable">
+            <h1 class="title" id="infoTitle">Location Information</h1>
+            <table>
 
-                    <img class="location" src="images\arboretumimg.png" alt="Arboretum-Picture" style="width:100%">
-                    <div class="locateContainer">
-                      <h4><b>Arboretum</b></h4>
-                      <p></p>
+              <tr id="firstRow">
+                  <td class="tableLeft">
+                    <div class="locateCards" id="arboretuminfo">
+
+                      <img class="location" src="images\arboretumimg.png" alt="Arboretum-Picture" style="width:100%">
+                      <div class="locateContainer">
+                        <h4><b>Arboretum</b></h4>
+                        <p></p>
+                      </div>
+        
                     </div>
+                  </td>
+
+                  <td class="tableMid1">
+                    <div class="locateCards" id="beaverstadiuminfo">
+
+                      <img class="location" src="images\beaverstadium.jpg" alt="Beaver-Stadium-Picture" style="width:100%">
+                      <div class="locateContainer">
+                        <h4><b>Beaver Stadium</b></h4>
+                        <p></p>
+                      </div>
       
+                    </div>
+                  </td>
+
+                  <td class="tableMid2">
+                    <div class="locateCards" id="berkeycreameryinfo">
+
+                      <img class="location" src="images\creameryimg.jpg" alt="Berkey-Creamery-Picture" style="width:100%">
+                      <div class="locateContainer">
+                        <h4><b>Berkey Creamery</b></h4>
+                        <p></p>
+                      </div>
+      
+                    </div>
+                  </td>
+
+                  <td class="tableRight">
+                    <div class="locateCards" id="bjcinfo">
+
+                      <img class="location" src="images\bjc.jpg" alt="BJC-Picture" style="width:100%">
+                      <div class="locateContainer">
+                        <h4><b>Bryce Jordan Center</b></h4>
+                        <p></p>
+                      </div>
+      
+                    </div>
+                  </td>
+              </tr>
+
+              <tr id="secondRow">
+                <td class="tableLeft">
+                  <div class="locateCards" id="eastdormsinfo">
+
+                    <img class="location" src="images\eastdorms.jpg" alt="East-Dorms-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>East Dorms</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
                 </td>
-
                 <td class="tableMid1">
-                  <div class="locateCards" id="beaverStadiumInfo">
+                  <div class="locateCards" id="hubinfo">
 
-                    <img class="location" src="images\beaverstadium.jpg" alt="Beaver-Stadium-Picture" style="width:100%">
+                    <img class="location" src="images\hubimg.jpg" alt="HUB-Picture" style="width:100%">
                     <div class="locateContainer">
-                      <h4><b>Beaver Stadium</b></h4>
+                      <h4><b>HUB</b></h4>
                       <p></p>
                     </div>
     
                   </div>
                 </td>
-
                 <td class="tableMid2">
-                  <div class="locateCards" id="berkeyCreameryInfo">
+                  <div class="locateCards" id="imbuildinginfo">
 
-                    <img class="location" src="images\creameryimg.jpg" alt="Berkey-Creamery-Picture" style="width:100%">
+                    <img class="location" src="images\IM-Building.jpg" alt="IM-Building-Picture" style="width:100%">
                     <div class="locateContainer">
-                      <h4><b>Berkey Creamery</b></h4>
+                      <h4><b>Intramural Building</b></h4>
                       <p></p>
                     </div>
     
                   </div>
                 </td>
-
                 <td class="tableRight">
-                  <div class="locateCards" id="bjcInfo">
+                  <div class="locateCards" id="nittanylionshrineinfo">
 
-                    <img class="location" src="images\bjc.jpg" alt="BJC-Picture" style="width:100%">
+                    <img class="location" src="images\shrineimg.jpg" alt="Nittany-Lion-Shrine-Picture" style="width:100%">
                     <div class="locateContainer">
-                      <h4><b>Bryce Jordan Center</b></h4>
+                      <h4><b>Nittany Lion Shrine</b></h4>
                       <p></p>
                     </div>
     
                   </div>
                 </td>
-            </tr>
+              </tr>
 
-            <tr id="secondRow">
-              <td class="tableLeft">
-                <div class="locateCards" id="eastDormsInfo">
+              <tr id="thridRow">
+                <td class="tableLeft">
+                  <div class="locateCards" id="northdormsinfo">
 
-                  <img class="location" src="images\eastdorms.jpg" alt="East-Dorms-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>East Dorms</b></h4>
-                    <p></p>
+                    <img class="location" src="images\northdorms.jpg" alt="North-Dorms-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>North Dorms</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
-  
-                </div>
-              </td>
-              <td class="tableMid1">
-                <div class="locateCards" id="hubInfo">
+                </td>
+                <td class="tableMid1">
+                  <div class="locateCards" id="oldmaininfo">
 
-                  <img class="location" src="images\hubimg.jpg" alt="HUB-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>HUB</b></h4>
-                    <p></p>
+                    <img class="location" src="images\oldmain.jpg" alt="Old-Main-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>Old Main</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
-  
-                </div>
-              </td>
-              <td class="tableMid2">
-                <div class="locateCards" id="imBuildingInfo">
+                </td>
+                <td class="tableMid2">
+                  <div class="locateCards" id="patteepaternolibraryinfo">
 
-                  <img class="location" src="images\IM-Building.jpg" alt="IM-Building-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>Intramural Building</b></h4>
-                    <p></p>
+                    <img class="location" src="images\library.jpg" alt="Pattee-Paterno-Library-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>Pattee / Paterno Library</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
-  
-                </div>
-              </td>
-              <td class="tableRight">
-                <div class="locateCards" id="nittanyLionShrineInfo">
+                </td>
+                <td class="tableRight">
+                  <div class="locateCards" id="southdormsinfo">
 
-                  <img class="location" src="images\shrineimg.jpg" alt="Nittany-Lion-Shrine-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>Nittany Lion Shrine</b></h4>
-                    <p></p>
+                    <img class="location" src="images\southdorms.jpg" alt="South-Dorms-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>South Dorms</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
-  
-                </div>
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr id="thridRow">
-              <td class="tableLeft">
-                <div class="locateCards" id="northDormsInfo">
+              <tr id="fourthRow">
+                <td class="tableLeft">
+                  <div class="locateCards" id="westdormsinfo">
 
-                  <img class="location" src="images\northdorms.jpg" alt="North-Dorms-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>North Dorms</b></h4>
-                    <p></p>
+                    <img class="location" src="images\westdorms.jpg" alt="West-Dorms-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>West Dorms</b></h4>
+                      <p></p>
+                    </div>
+    
                   </div>
-  
-                </div>
-              </td>
-              <td class="tableMid1">
-                <div class="locateCards" id="oldMainInfo">
+                </td>
+                <td class="tableMid1">
+                  <div class="locateCards" id="westgateinfo">
 
-                  <img class="location" src="images\oldmain.jpg" alt="Old-Main-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>Old Main</b></h4>
-                    <p></p>
+                    <img class="location" src="images\ist-building.jpg" alt="Westgate-Picture" style="width:100%">
+                    <div class="locateContainer">
+                      <h4><b>Westgate Building</b></h4>
+                      <p></p>
+                    </div>
+
                   </div>
-  
-                </div>
-              </td>
-              <td class="tableMid2">
-                <div class="locateCards" id="libraryInfo">
+                </td>
+              </tr>
 
-                  <img class="location" src="images\library.jpg" alt="Pattee-Paterno-Library-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>Pattee / Paterno Library</b></h4>
-                    <p></p>
-                  </div>
-  
-                </div>
-              </td>
-              <td class="tableRight">
-                <div class="locateCards" id="southDormsInfo">
+            </table>
+          </div>
 
-                  <img class="location" src="images\southdorms.jpg" alt="South-Dorms-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>South Dorms</b></h4>
-                    <p></p>
-                  </div>
-  
-                </div>
-              </td>
-            </tr>
+        </section>
+        <!--End of Navigation link section-->
 
-            <tr id="fourthRow">
-              <td class="tableLeft">
-                <div class="locateCards" id="westDormsInfo">
+        <!--Contains contact card information-->
+        <section class="area-4" id="contactSection">
 
-                  <img class="location" src="images\westdorms.jpg" alt="West-Dorms-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>West Dorms</b></h4>
-                    <p></p>
-                  </div>
-  
-                </div>
-              </td>
-              <td class="tableMid1">
-                <div class="locateCards" id="westgateInfo">
+          <p><a href="/contact.html">Contact Us</a></p>
 
-                  <img class="location" src="images\ist-building.jpg" alt="Westgate-Picture" style="width:100%">
-                  <div class="locateContainer">
-                    <h4><b>Westgate Building</b></h4>
-                    <p></p>
-                  </div>
-
-                </div>
-              </td>
-            </tr>
-
-          </table>
-        </div>
+        </section>
+        <!--End of contacts section-->
 
       </main>
 
-      <footer class="area-3">
+      <footer class="area-5">
 
         <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
 

@@ -55,6 +55,18 @@ $("#startButton").click(function(){
 
 document.addEventListener("load", startButton);
 
+/**
+ * functionality for location cards on index page
+ */
+$(".locateCards").click(function(){
+
+    let idName = this.id;
+    window.location = "/" + idName + ".html";
+    
+});
+
+document.addEventListener("load", ".locateCards");
+
 function checkBeginner(){
     var question1 = document.getElementById("question1");
     var question2 = document.getElementById("question2");
