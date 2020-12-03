@@ -13,6 +13,7 @@ function createButton(buttonName, IdLocation){
 
     let btnLocation = document.getElementById(IdLocation);
 
+    /*
     btn.style.backgroundColor = "cyan";
     btn.style.color = "black";
     btn.style.marginTop = "10px";
@@ -21,9 +22,11 @@ function createButton(buttonName, IdLocation){
     btn.style.paddingBottom = "5px";
     btn.style.flexGrow = "1";
     btn.style.flexShrink = "1";
+    */
 
     btnLocation.appendChild(btn);
 }
+
 
 //start button for index.html
 var startButton = createButton("Start Game", "startButton");

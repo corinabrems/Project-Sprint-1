@@ -77,6 +77,64 @@ section::before {
   margin:-50px 0 0; /* negative fixed header height */
 }
 
+.game-flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+}
+
+.gameButton{
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 30px 35px;
+}
+
+.gameButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.gameButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.gameButton:hover span {
+  padding-right: 25px;
+}
+
+.gameButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#beginnerGameButton{
+  background-color: green;
+}
+
+#intermediateGameButton{
+  background-color: orange;
+}
+
+#expertGameButton{
+  background-color: red;
+}
+
 ul {
   position: fixed;
   top: 0;
@@ -284,56 +342,3 @@ footer > p{
   height:400px;
   width:400px;
 }
-
-.button {
-  border-radius: 4px;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-#beginnerButton{
-  background-color: green;
-}
-
-#intermediateButton{
-  background-color: orange;
-}
-
-#expertButton{
-  background-color: red;
-}
-
