@@ -1,83 +1,85 @@
+<!DOCTYPE html>
+
 <html>
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Project-Sprint-1-main">
-    <meta name="keywords" content="HTML">
-    <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
+        <meta charset="UTF-8">
+        <meta name="description" content="Project-Sprint-1-main">
+        <meta name="keywords" content="HTML">
+        <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-    <title>Pattee/Paterno Library</title>
+        <title>Pattee/Paterno Library</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-</head>
+    </head>
 
 
-<body>
+    <body>
 
-    <div class="grid-container">
+        <div class="grid-container">
 
-        <header class="area-1">
+            <header class="area-1">
 
-            <ul>
-                <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
-                <li><a href="index.html">Navigate PSU</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+                <ul>
+                    <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
+                    <li><a href="index.html">Navigate PSU</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
 
-        </header>
+            </header>
 
-        <main class="area-2">
+            <main class="area-2">
 
-            <h1 class="title">Welcome to Pattee & Paterno Library!</h1>
-            <div class="infoText">
+                <h1 class="title">Welcome to Pattee & Paterno Library!</h1>
+                <div class="infoText">
 
-                <p>Students can access many resources on the library's website by logging in with their psu credentials!
-                    The library offers course reserves, interlibrary loans, an alumni library, virtual reality, and tech
-                    support/equipment.
-                <p> Students can also reserve seats and rooms for studying or they can use the avaialble rooms and
-                    spaces to study. There is convieniently a Starbucks on the Pattee side of the libray by the study
-                    rooms.
-            </div>
+                    <p>Students can access many resources on the library's website by logging in with their psu credentials!
+                        The library offers course reserves, interlibrary loans, an alumni library, virtual reality, and tech
+                        support/equipment.
+                    <p> Students can also reserve seats and rooms for studying or they can use the avaialble rooms and
+                        spaces to study. There is convieniently a Starbucks on the Pattee side of the libray by the study
+                        rooms.
+                </div>
 
-            <br>
+                <br>
 
-            <img id="library" src="images/library.jpg" alt="library image">
+                <img id="library" src="images/library.jpg" alt="library image">
 
-            <div class="googleMaps" id="map"></div>
+                <div class="googleMaps" id="map"></div>
 
-            <script>
-                function initMap() {
-                    const myLatLng = { lat: 40.797638, lng: -77.866412 };
-                    const map = new google.maps.Map(document.getElementById("map"), {
-                        zoom: 17,
-                        center: myLatLng,
-                    });
-                    new google.maps.Marker({
-                        position: myLatLng,
-                        map,
-                        title: "Pattee / Paterno Library",
-                    });
-                }
-            </script>
+                <script>
+                    function initMap() {
+                        const myLatLng = { lat: 40.797638, lng: -77.866412 };
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 17,
+                            center: myLatLng,
+                        });
+                        new google.maps.Marker({
+                            position: myLatLng,
+                            map,
+                            title: "Pattee / Paterno Library",
+                        });
+                    }
+                </script>
 
-            <script defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
-            </script>
+                <script defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqnW5pKxP8szkP4iC0QVgzT1q7-5W09vU&callback=initMap">
+                </script>
 
-        </main>
+            </main>
 
-        <footer class="area-5">
+            <footer class="area-7">
 
-            <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+                <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
 
-        </footer>
+            </footer>
 
-    </div>
+        </div>
 
-</body>
+    </body>
 
 </html>
