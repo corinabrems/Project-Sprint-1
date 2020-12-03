@@ -9,7 +9,7 @@
     <meta name="keywords" content="HTML">
     <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-    <title>About</title>
+    <title>Beginner Game</title>
 
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <script src="scripts/scripts.js"></script>
@@ -42,20 +42,37 @@
                 For this route, you will be starting at North Dorms and ending at the Westgate Building!
             </p>
 
-            <form id="quizBeginner" name="quizBeginner"></form>
-            <p>Starting at North Dorms, where will you go next on your way to the Westgate Building?</p>
-            <input type="radio" id="mc" name="question1" value="HUB">HUB<br>
-            <input type="radio" id="mc" name="question1" value="Pattee and Paterno Library">Pattee and Paterno
-            Library<br>
+            <form id="quizBeginner" name="quizBeginner">
+                <div class="quizQuestion" id="question1">
 
-            <p>Where would you go next?</p>
-            <input type="radio" id="mc" name="question2" value="North Dorms">North Dorms<br>
-            <input type="radio" id="mc" name="question2" value="West Dorms">West Dorms<br>
+                    <p>Starting at North Dorms, where will you go next on your way to the Westgate Building?</p>
 
-            <br>
-            <br>
+                    <input type="radio" id="beginnerQ1O1" name="begQuestion1" value="HUB">
+                    <lable for="beginnerQ1O1">HUB</lable><br>
 
-            <input id="button" type="button" value="I've arrived at Westgate!" onclick="checkBeginner();">
+                    <input type="radio" id="beginnerQ1O2" name="begQuestion1" value="Pattee and Paterno Library">
+                    <lable for="beginnerQ1O2">Pattee and Paterno Library</lable><br>
+
+                </div>
+
+                <div class="quizQuestion" id="question2">
+
+                    <p>Where would you go next?</p>
+
+                    <input type="radio" id="beginnerQ2O1" name="begQuestion2" value="North Dorms">
+                    <lable for="beginnerQ2O1">North Dorms</lable><br>
+
+                    <input type="radio" id="mc" name="begQuestion2" value="West Dorms">
+                    <lable for="beginnerQ1O2">West Dorms</lable><br>
+
+                </div>
+
+                <br>
+                <br>
+
+                <div id="begGameError"></div>
+
+                <input id="button" type="button" value="I've arrived at Westgate!" onclick="checkBeginner();">
             </form>
 
             <div id="results"></div>
