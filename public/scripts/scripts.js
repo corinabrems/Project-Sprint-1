@@ -38,7 +38,7 @@ $("#startButton").click(function(){
     //checks if start and destination location are the same and throws error if they do
     if(startLocation === destinationLocation){
         let errorMsg = document.getElementById("locationInputError");
-        errorMsg.innerText = "Start and destination locations must differ."
+        errorMsg.innerText = "Start and destination locations must differ.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
         console.log("Error: Start and Destination locations match");
@@ -70,18 +70,95 @@ $(".locateCards").click(function(){
 
 document.addEventListener("load", ".locateCards");
 
+function getSelectedRadios(form){
+    let allRadios = form.elements;
+
+    let selectedRadios = [];
+    let totalSelected = 0;
+
+    for(let i = 0; i < allRadios.length; i++){
+
+        if(allRadios[i].checked){
+            selectedRadios[totalSelected] = allRadios[i].value;
+            totalSelected++;
+        }
+
+    }
+    return selectedRadios;
+}
+
+//beginner game check
 function checkBeginner(){
-    var question1 = document.getElementById("question1");
-    var question2 = document.getElementById("question2");
-    let correct = 0;
+    let selectedRadios = getSelectedRadios(document.getElementById("quizBeginner"));
+    console.log(selectedRadios);
 
-    if(question1 == "Pattee and Paterno Library"){
-        correct++;
+    let correctCount = 0;
+
+    let errorMsg = document.getElementById("begGameError");
+
+    if(selectedRadios.length == 0){
+        errorMsg.innerText = "Select a path.";
+        errorMsg.style.color = "red";
+        errorMsg.style.fontSize = "80%";
+        console.log("Error: No path selection for beginner game question 1.");
     }
-    if(question2 == "West Dorms"){
-        correct++;
+    else if(selectedRadios.length > 0){
+        errorMsg.innerHTML = null;
+
+        //question 1
+        for(let i = 0; i < selectedRadios.length; i++){
+            if(selectedRadios[i] == "Pattee and Paterno Library"){
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 2
+        for(let i = 0; i < selectedRadios.length; i++){
+            if(selectedRadios[i] == "West Dorms"){
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
     }
 
-    document.getElementById("results").innerHTML = "You got " + correct + " correct. **Unfortunately there is an error in calculating the total currently**";
+    document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
 };
 
+//intermediate game check
+//needs more and add html elements
+function checkIntermediate(){
+
+    let selectedRadios = getSelectedRadios(document.getElementById("quizIntermediate"));
+    console.log(selectedRadios);
+
+    let correctCount = 0;
+
+    let errorMsg = document.getElementById("intGameError");
+
+    if(selectedRadios.length == 0){
+        errorMsg.innerText = "Select a path.";
+        errorMsg.style.color = "red";
+        errorMsg.style.fontSize = "80%";
+        console.log("Error: No path selection for beginner game question 1.");
+    }
+    else if(selectedRadios.length > 0){
+        errorMsg.innerText = "";
+
+        //question 1
+        for(let i = 0; i < selectedRadios.length; i++){
+            //add correct answer
+            if(selectedRadios[i] == ""){
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+    }
+
+    document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
+
+}
