@@ -28,8 +28,7 @@ function createButton(buttonName, IdLocation){
 }
 
 
-//start button for index.html
-var startButton = createButton("Start Game", "startButton");
+document.addEventListener("load", createButton("Start Game", "startButton"));
 $("#startButton").click(function(){
     //gets selected starting location from dropdown box
     let startLocation = $("#startDrop option:selected").text();
@@ -56,19 +55,13 @@ $("#startButton").click(function(){
     
 });
 
-document.addEventListener("load", startButton);
-
 /**
  * functionality for location cards on index page
  */
-$(".locateCards").click(function(){
-
-    let idName = this.id;
+function navigateToPage(current_id){
+    let idName = current_id;
     window.location = "/" + idName + ".html";
-    
-});
-
-document.addEventListener("load", ".locateCards");
+}
 
 function getSelectedRadios(form){
     let allRadios = form.elements;
@@ -96,7 +89,7 @@ function checkBeginner(){
 
     let errorMsg = document.getElementById("begGameError");
 
-    if(selectedRadios.length == 0){
+    if(selectedRadios.length === 0){
         errorMsg.innerText = "Select a path.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
@@ -126,7 +119,7 @@ function checkBeginner(){
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
-};
+}
 
 //intermediate game check
 //needs more and add html elements
@@ -139,7 +132,7 @@ function checkIntermediate(){
 
     let errorMsg = document.getElementById("intGameError");
 
-    if(selectedRadios.length == 0){
+    if(selectedRadios.length === 0){
         errorMsg.innerText = "Select a path.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
@@ -151,7 +144,7 @@ function checkIntermediate(){
         //question 1
         for(let i = 0; i < selectedRadios.length; i++){
             //add correct answer
-            if(selectedRadios[i] == ""){
+            if(selectedRadios[i] === ""){
                 correctCount++;
                 console.log("Correct!");
                 break;
