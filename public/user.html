@@ -13,7 +13,7 @@
 
 <body>
     <h3>Add User</h3>
-    <form method="post" action="/users/create">
+    <form method="post" action="/users">
         Username: <input type="text" name="username"><br>
         <br>
         Password: <input type="text" name="password"><br>
@@ -39,7 +39,7 @@
     <button id="updateUsersButton" onClick="updateUsers()">Update User Info</button>
     <br>
     <h3>Delete User</h3>
-    <form method="get" action="/users/remove">
+    <form method="get" action="/users">
         Username: <input type="text" name="delUsername"><br>
         <br>
         <input type="submit" value="Remove">
