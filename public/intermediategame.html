@@ -2,59 +2,103 @@
 
 <html>
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Project-Sprint-1-main">
-    <meta name="keywords" content="HTML">
-    <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
+  <meta charset="UTF-8">
+  <meta name="description" content="Project-Sprint-1-main">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-    <title>Intermediate Game</title>
+  <title>Intermediate Game</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/scripts.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="grid-container">
+  <div class="grid-container">
 
-      <header class="area-1">
+    <header class="area-1">
 
-        <ul>
-          <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
-          <li><a href="index.html">Navigate PSU</a></li>
-          <li><a href="index.html#faqSection">FAQ</a></li>
-          <li><a href="index.html#contactSection">Contact</a></li>
-          <li><a href="index.html#aboutSection">About</a></li>
-        </ul>
+      <ul>
+        <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
+        <li><a href="index.html">Navigate PSU</a></li>
+        <li><a href="index.html#faqSection">FAQ</a></li>
+        <li><a href="index.html#contactSection">Contact</a></li>
+        <li><a href="index.html#aboutSection">About</a></li>
+      </ul>
 
-      </header>
+    </header>
 
-      <main class="area-2">
+    <main class="area-2">
 
-        <h1 class="title">Intermediate Route</h1>
+      <h1 class="title">Intermediate Route</h1>
 
-        <p>Intermediate Game stuff</p>
+      <p id="aboutText">
+        Good luck! For this intermediate route, you will start at West Dorms and make your way to East Dorms.
+      </p>
 
-        <form id="quizIntermediate" name="quizIntermediate">
+      <form id="quizIntermediate" name="quizIntermediate">
+        <div class="quizQuestion" id="question1">
+
+          <p>Starting at West Dorms, where will you go next on your way to South Dorms? The first version of this
+            building was completed in the 1800's!</p>
+
+          <input type="radio" id="intQ1O1" name="intQuestion1" value="IM Building">
+          <lable for="intQ1O1">IM Building</lable><br>
+
+          <input type="radio" id="intQ1O2" name="intQuestion1" value="Old Main">
+          <lable for="intQ1O2">Old Main</lable><br>
+
+        </div>
+
+        <div class="quizQuestion" id="question2">
+
+          <p>Where would you go next? This location is usually one of the most busy on campus!</p>
+
+          <input type="radio" id="intQ2O1" name="intQuestion2" value="Beaver Stadium">
+          <lable for="intQ2O1">Beaver Stadium</lable><br>
+
+          <input type="radio" id="mc" name="intQuestion2" value="HUB">
+          <lable for="intQ2O2">HUB</lable><br>
+
+          <div class="quizQuestion" id="question3">
+
+            <p>Where to next? On your way here you may want to grab a snack.</p>
+
+            <input type="radio" id="intQ3O1" name="intQuestion3" value="Berkey Creamery">
+            <lable for="intQ1O1">Berkey Creamery</lable><br>
+
+            <input type="radio" id="mc" name="intQuestion3" value="Pattee and Paterno Library">
+            <lable for="intQ1O2">Pattee and Paterno Library</lable><br>
+
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div id="begGameError"></div>
+
+        <input id="button" type="button" value="Next stop, East Dorms!" onclick="checkIntermediate();">
+      </form>
+
+      <div id="results"></div>
 
 
+    </main>
 
-        </form>
+    <footer class="area-7">
 
-        <div id="intGameError"></div>
+      <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
 
-      </main>  
+    </footer>
 
-      <footer class="area-7">
-        
-        <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+  </div>
 
-      </footer>
-
-    </div>
-
-  </body>
+</body>
 
 </html>
