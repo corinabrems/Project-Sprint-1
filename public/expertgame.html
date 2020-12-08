@@ -2,51 +2,128 @@
 
 <html>
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="description" content="Project-Sprint-1-main">
-    <meta name="keywords" content="HTML">
-    <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
+  <meta charset="UTF-8">
+  <meta name="description" content="Project-Sprint-1-main">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Corina Brems, Matthew Ullrich, Mike Wagner">
 
-    <title>Expert Game</title>
+  <title>Expert Game</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/scripts.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="grid-container">
+  <div class="grid-container">
 
-      <header class="area-1">
+    <header class="area-1">
 
-        <ul>
-          <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
-          <li><a href="index.html">Navigate PSU</a></li>
-          <li><a href="index.html#faqSection">FAQ</a></li>
-          <li><a href="index.html#contactSection">Contact</a></li>
-          <li><a href="index.html#aboutSection">About</a></li>
-        </ul>
+      <ul>
+        <li><img id="animated-gif" src="images/source.gif" alt="psu logo"></li>
+        <li><a href="index.html">Navigate PSU</a></li>
+        <li><a href="index.html#faqSection">FAQ</a></li>
+        <li><a href="index.html#contactSection">Contact</a></li>
+        <li><a href="index.html#aboutSection">About</a></li>
+      </ul>
 
-      </header>
+    </header>
 
-      <main class="area-2">
+    <main class="area-2">
 
-        <h1 class="title">Expert Route</h1>
+      <h1 class="title">Expert Route</h1>
 
-        <p>Expert Game Stuff</p>
+      <p>For this last route, you'll be making your way from Beaver Stadium to the Nittany Lion Shrine. Good luck!</p>
 
-      </main>  
+      <form id="quizExpert" name="quizExpert">
+        <div class="quizQuestion" id="question1">
 
-      <footer class="area-7">
-        
-        <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+          <p>Starting at Beaver Stadium, where would you go next? This location is very important for incoming
+            first-year students and graduating students.</p>
 
-      </footer>
+          <input type="radio" id="expQ1O1" name="expQuestion1" value="Bryce Jordan Center">
+          <lable for="intQ1O1">Bryce Jordan Center</lable><br>
 
-    </div>
+          <input type="radio" id="expQ1O2" name="expQuestion1" value="The Arboretum">
+          <lable for="intQ1O2">The Arboretum</lable><br>
 
-  </body>
+        </div>
+
+        <div class="quizQuestion" id="question2">
+
+          <p>Where would you go next? This location offers many pieces of workout equipment and features a large indoor
+            rock climbing wall!</p>
+
+          <input type="radio" id="mc" name="expQuestion2" value="IM Building">
+          <lable for="expQ2O1">IM Building</lable><br>
+
+          <input type="radio" id="mc" name="expQuestion2" value="Old Main">
+          <lable for="expQ2O2">Old Main</lable><br>
+
+        </div>
+
+        <div class="quizQuestion" id="question3">
+
+          <p>Where to next? This is the place where you're most likely to find first-year students on campus.</p>
+
+          <input type="radio" id="mc" name="expQuestion3" value="East Dorms">
+          <lable for="expQ3O1">East Dorms</lable><br>
+
+          <input type="radio" id="mc" name="expQuestion3" value="North Dorms">
+          <lable for="expQ3O2">North Dorms</lable><br>
+
+        </div>
+
+        <div class="quizQuestion" id="question4">
+
+          <p>Follow Curtain Road to this next location. After studying here, make sure to stop at Starbucks for a
+            refreshing drink!</p>
+
+          <input type="radio" id="mc" name="expQuestion4" value="HUB">
+          <lable for="expQ4O1">HUB</lable><br>
+
+          <input type="radio" id="mc" name="expQuestion4" value="Pattee and Paterno Library">
+          <lable for="expQ4O2">Pattee and Paterno Library</lable><br>
+
+        </div>
+
+        <div class="quizQuestion" id="question5">
+
+          <p>For the final location on your way to the Nittany Lion Shrine, stop by this spot to grab something to eat
+            in the dining hall!</p>
+
+          <input type="radio" id="mc" name="expQuestion5" value="West Dorms">
+          <lable for="expQ5O1">West Dorms</lable><br>
+
+          <input type="radio" id="mc" name="expQuestion5" value="Westgate Building">
+          <lable for="expQ5O2">Westgate Building</lable><br>
+
+        </div>
+
+
+        <br>
+        <br>
+
+        <div id="begGameError"></div>
+
+        <input id="button" type="button" value="Next stop, Nittany Lion Shrine!" onclick="checkExpert();">
+      </form>
+
+      <div id="results"></div>
+
+    </main>
+
+    <footer class="area-7">
+
+      <p>Created by: Mike Wagner, Matthew Ullrich, Corina Brems</p>
+
+    </footer>
+
+  </div>
+
+</body>
 
 </html>

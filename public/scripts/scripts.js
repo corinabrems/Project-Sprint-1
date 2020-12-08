@@ -119,6 +119,9 @@ function checkBeginner() {
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
+    if(correctCount == 2){
+        document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
+    }
 }
 
 //intermediate game check
@@ -173,5 +176,87 @@ function checkIntermediate() {
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
+    if(correctCount == 3){
+        document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
+    }
 
 }
+
+//expert game check
+function checkExpert() {
+
+    let selectedRadios = getSelectedRadios(document.getElementById("quizExpert"));
+    console.log(selectedRadios);
+
+    let correctCount = 0;
+
+    let errorMsg = document.getElementById("begGameError");
+
+    if (selectedRadios.length === 0) {
+        errorMsg.innerText = "Select a path.";
+        errorMsg.style.color = "red";
+        errorMsg.style.fontSize = "80%";
+        console.log("Error: No path selection for question 1!");
+    }
+    else if (selectedRadios.length > 0) {
+        errorMsg.innerText = null;
+
+        //question 1
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "Bryce Jordan Center") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 2
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "IM Building") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 3
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "East Dorms") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 4
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "Pattee and Paterno Library") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 5
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "West Dorms") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+    }
+
+    document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
+    if(correctCount == 5){
+        document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
+    }
+
+}
+
