@@ -59,5 +59,8 @@ exports.findAll = (req, res) => {
 };
 
 exports.remove = (req, res) => {
-    User.find()
+    User.deleteOne({username: req.body.delUsername})
+        .then((data) =>{
+            console.log("Deleted User" + data);
+        })
 };
