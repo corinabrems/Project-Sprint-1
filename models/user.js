@@ -16,19 +16,10 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        begGameStatus: {
-            desc: "Whether or not this use has completed the beginner game",
-            type: Boolean,
-            required: false
-        },
-        intGameStatus: {
-            desc: "Whether or not this use has completed the beginner game",
-            type: Boolean,
-            required: false
-        },
-        expGameStatus: {
-            desc: "Whether or not this use has completed the beginner game",
-            type: Boolean,
+        favoriteLocation: {
+            desc: "The user's favorite location",
+            trim: true,
+            type: String,
             required: false
         }
     }
