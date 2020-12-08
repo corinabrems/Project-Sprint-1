@@ -119,10 +119,11 @@ function checkBeginner() {
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
-    if(correctCount == 2){
+    if (correctCount == 2) {
         document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
     }
 }
+
 
 //intermediate game check
 function checkIntermediate() {
@@ -176,20 +177,20 @@ function checkIntermediate() {
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
-    if(correctCount == 3){
+    if (correctCount == 3) {
         document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
     }
 
 }
 
-function getUsers(){
+function getUsers() {
     console.log("getUsers called");
     $.ajax({
         method: 'GET',
         url: '/users',
-        success: (data) =>{
+        success: (data) => {
             console.log(data);
-            data.forEach(function (arrayItem){
+            data.forEach(function (arrayItem) {
                 var item = arrayItem.username;
                 console.log("Array item username: " + item);
                 $("#usersList").append("<li>" + item + "</li>");
@@ -271,8 +272,10 @@ function checkExpert() {
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
-    if(correctCount == 5){
+    if (correctCount == 5) {
         document.getElementById("results").innerHTML = "You got all " + correctCount + " correct. Congrats!";
+        document.getElementById("post").innerHTML = "<a href=\"user.html\"> Click here to enter your name and favorite Penn State location!</a>";
+
     }
 
 }
