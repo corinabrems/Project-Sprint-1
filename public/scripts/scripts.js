@@ -5,7 +5,7 @@
  * @param {*} IdLocation 
  * ^^id of html element button is added to
  */
-function createButton(buttonName, IdLocation){
+function createButton(buttonName, IdLocation) {
     let btn = document.createElement("button");
     let btnName = document.createTextNode(buttonName);
 
@@ -29,20 +29,20 @@ function createButton(buttonName, IdLocation){
 
 
 document.addEventListener("load", createButton("Start Game", "startButton"));
-$("#startButton").click(function(){
+$("#startButton").click(function () {
     //gets selected starting location from dropdown box
     let startLocation = $("#startDrop option:selected").text();
     //gets selected destination from dropdown box
     let destinationLocation = $("#destinationDrop option:selected").text();
     //checks if start and destination location are the same and throws error if they do
-    if(startLocation === destinationLocation){
+    if (startLocation === destinationLocation) {
         let errorMsg = document.getElementById("locationInputError");
         errorMsg.innerText = "Start and destination locations must differ.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
         console.log("Error: Start and Destination locations match");
     }
-    else{
+    else {
         let errorMsg = document.getElementById("locationInputError");
         errorMsg.innerHTML = "";
         console.log("Start Location: " + startLocation);
@@ -52,26 +52,26 @@ $("#startButton").click(function(){
         window.location = "/game.html";
     }
 
-    
+
 });
 
 /**
  * functionality for location cards on index page
  */
-function navigateToPage(current_id){
+function navigateToPage(current_id) {
     let idName = current_id;
     window.location = "/" + idName + ".html";
 }
 
-function getSelectedRadios(form){
+function getSelectedRadios(form) {
     let allRadios = form.elements;
 
     let selectedRadios = [];
     let totalSelected = 0;
 
-    for(let i = 0; i < allRadios.length; i++){
+    for (let i = 0; i < allRadios.length; i++) {
 
-        if(allRadios[i].checked){
+        if (allRadios[i].checked) {
             selectedRadios[totalSelected] = allRadios[i].value;
             totalSelected++;
         }
@@ -81,7 +81,7 @@ function getSelectedRadios(form){
 }
 
 //beginner game check
-function checkBeginner(){
+function checkBeginner() {
     let selectedRadios = getSelectedRadios(document.getElementById("quizBeginner"));
     console.log(selectedRadios);
 
@@ -89,18 +89,18 @@ function checkBeginner(){
 
     let errorMsg = document.getElementById("begGameError");
 
-    if(selectedRadios.length === 0){
+    if (selectedRadios.length === 0) {
         errorMsg.innerText = "Select a path.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
-        console.log("Error: No path selection for beginner game question 1.");
+        console.log("Error: No path selection for question 1!");
     }
-    else if(selectedRadios.length > 0){
+    else if (selectedRadios.length > 0) {
         errorMsg.innerHTML = null;
 
         //question 1
-        for(let i = 0; i < selectedRadios.length; i++){
-            if(selectedRadios[i] == "Pattee and Paterno Library"){
+        for (let i = 0; i < selectedRadios.length; i++) {
+            if (selectedRadios[i] == "Pattee and Paterno Library") {
                 correctCount++;
                 console.log("Correct!");
                 break;
@@ -108,8 +108,8 @@ function checkBeginner(){
         }
 
         //question 2
-        for(let i = 0; i < selectedRadios.length; i++){
-            if(selectedRadios[i] == "West Dorms"){
+        for (let i = 0; i < selectedRadios.length; i++) {
+            if (selectedRadios[i] == "West Dorms") {
                 correctCount++;
                 console.log("Correct!");
                 break;
@@ -122,34 +122,54 @@ function checkBeginner(){
 }
 
 //intermediate game check
-//needs more and add html elements
-function checkIntermediate(){
+function checkIntermediate() {
 
     let selectedRadios = getSelectedRadios(document.getElementById("quizIntermediate"));
     console.log(selectedRadios);
 
     let correctCount = 0;
 
-    let errorMsg = document.getElementById("intGameError");
+    let errorMsg = document.getElementById("begGameError");
 
-    if(selectedRadios.length === 0){
+    if (selectedRadios.length === 0) {
         errorMsg.innerText = "Select a path.";
         errorMsg.style.color = "red";
         errorMsg.style.fontSize = "80%";
-        console.log("Error: No path selection for beginner game question 1.");
+        console.log("Error: No path selection for question 1!");
     }
-    else if(selectedRadios.length > 0){
-        errorMsg.innerText = "";
+    else if (selectedRadios.length > 0) {
+        errorMsg.innerText = null;
 
         //question 1
-        for(let i = 0; i < selectedRadios.length; i++){
+        for (let i = 0; i < selectedRadios.length; i++) {
             //add correct answer
-            if(selectedRadios[i] === ""){
+            if (selectedRadios[i] === "Old Main") {
                 correctCount++;
                 console.log("Correct!");
                 break;
             }
         }
+
+        //question 2
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "HUB") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
+        //question 3
+        for (let i = 0; i < selectedRadios.length; i++) {
+            //add correct answer
+            if (selectedRadios[i] === "Berkey Creamery") {
+                correctCount++;
+                console.log("Correct!");
+                break;
+            }
+        }
+
     }
 
     document.getElementById("results").innerHTML = "You got " + correctCount + " correct.";
