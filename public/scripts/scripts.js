@@ -182,6 +182,23 @@ function checkIntermediate() {
 
 }
 
+
+function getUsers(){
+    console.log("getUsers called");
+    $.ajax({
+        method: 'GET',
+        url: '/users.js',
+        success: (data) =>{
+            console.log(data);
+            data.forEach(function (arrayItem){
+                var item = arrayItem.username;
+                console.log("Array item username: " + item);
+                $("#usersList").append("<li>" + item + "</li>");
+            });
+        }
+    });
+}
+
 //expert game check
 function checkExpert() {
 
@@ -259,4 +276,3 @@ function checkExpert() {
     }
 
 }
-
