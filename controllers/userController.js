@@ -60,3 +60,6 @@ exports.findAll = (req, res) => {
         });
 };
 
+exports.remove = (req, res) => {
+    User.find()
+};
