@@ -186,13 +186,14 @@ function getUsers(){
     console.log("getUsers called");
     $.ajax({
         method: 'GET',
-        url: '/users.js',
+        url: '/users',
         success: (data) =>{
             console.log(data);
             data.forEach(function (arrayItem){
                 var item = arrayItem.username;
                 console.log("Array item username: " + item);
                 $("#usersList").append("<li>" + item + "</li>");
+                console.log("appended list element");
             });
         }
     });
