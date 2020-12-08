@@ -22,9 +22,7 @@ exports.create = (req, res) => {
     const user = new User({
         username: req.body.username,
         password: req.body.password,
-        begGameStatus: false,
-        intGameStatus: false,
-        expGameStatus: false
+        favoriteLocation: "",
     });
 
     console.log("New User: " + user);
