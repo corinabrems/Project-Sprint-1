@@ -23,25 +23,4 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
-/*
-app.post("/create", function(req, res) {
-
-    // Create a student from the submitted form data
-    var stu = new Person({
-       name: req.body.name,
-       gpa: req.body.gpa,
-       birthDate: new Date(req.body.birthdate)
-    });
- 
-    stu.save(function(err, stu) {
-       if (err) {
-          res.status(400).send(err);
-       } 
-       else {
-          res.send("Person was saved.");
-       }
-    });
- });
-*/
-
 module.exports = app;

@@ -182,7 +182,6 @@ function checkIntermediate() {
 
 }
 
-
 function getUsers(){
     console.log("getUsers called");
     $.ajax({
